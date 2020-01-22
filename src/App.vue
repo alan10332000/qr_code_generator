@@ -12,7 +12,7 @@
         <qrcode
           :value="url[index]"
           tag="img"
-          :options="{ width: 120, errorCorrectionLevel: 'H', margin: 1}"
+          :options="{ width: 100, errorCorrectionLevel: 'H', margin: 1}"
           class="pages__qrcode"
         />
         <div class="pages__text">
@@ -183,7 +183,7 @@ body {
 
 .pages__wrapper {
   display: inline-block;
-  width: 155px;
+  width: 130px;
   /* box-sizing: border-box; */
   border: solid 0.5px #ccc;
 }
