@@ -12,7 +12,7 @@
         <qrcode
           :value="url[index]"
           tag="img"
-          :options="{ width: 150, errorCorrectionLevel: 'H', margin: 0}"
+          :options="{ width: 120, errorCorrectionLevel: 'H', margin: 1}"
           class="pages__qrcode"
         />
         <div class="pages__text">
@@ -21,17 +21,12 @@
       </div>
     </page>
 
-    <page
+    <!-- <page
+      v-for="page in pages"
+      :key="page"
       size="A4"
       class="pages__pages"
-    >
-    </page>
-
-    <page
-      size="A4"
-      class="pages__pages"
-    >
-    </page>
+    /> -->
   </div>
 </template>
 
@@ -41,77 +36,136 @@ export default {
   name: 'app',
   data () {
     return {
+      pages: 5,
       url: [
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/',
-        'https://www.instagram.com/',
-        'https://www.google.com/',
-        'https://www.youtube.com/',
-        'https://www.facebook.com/',
-        'https://www.twitch.tv/',
-        'https://www.udemy.com/',
-        'https://www.pinterest.com/',
-        'https://www.apple.com/',
-        'https://www.vlive.tv/',
-        'https://www.netflix.com/'
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use',
+        'https://lucky777.alljoint.tw/5d8edfa3-a48f-4389-a9ce-57c98544083c/use'
       ]
     }
   }
@@ -129,14 +183,14 @@ body {
 
 .pages__wrapper {
   display: inline-block;
-  /* width: 200px; */
+  width: 155px;
   /* box-sizing: border-box; */
   border: solid 0.5px #ccc;
 }
 
 .pages__qrcode {
   text-align: center;
-  margin: 5px;
+  margin: 15px;
   /* border: solid 0.5px #ccc; */
 }
 
@@ -145,17 +199,21 @@ body {
   vertical-align: bottom;
   text-align: center;
   transform: translateY(-5px);
-  overflow: hidden;
+  /* overflow: hidden; */
+  word-break: break-all;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 page[size="A4"] {
   background: white;
   width: 210mm;
-  height: 297mm;
+  /* height: 297mm; */
   display: block;
   margin: 0 auto;
   margin-bottom: 5mm;
-  box-shadow: 0 0 5mm rgba(0, 0, 0, 0.5);
+  /* padding: 5mm; */
+  /* box-shadow: 0 0 5mm rgba(0, 0, 0, 0.5); */
 }
 
 @media print {
