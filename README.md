@@ -1,4 +1,4 @@
-# qrcode_generator
+# qr_code_generator
 
 ## Project setup
 ```
