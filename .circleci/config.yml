@@ -32,6 +32,26 @@ jobs: # 有哪些工作
           root: dist
           paths: '*'
 
+  deploy:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace: # 回復編譯好的檔案
+          at: dist
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.2.0
+            git config user.email $GH_EMAIL
+            git config user.name $GH_NAME
+      - add_ssh_keys:
+          fingerprints:
+            - 'd4:96:0b:d2:6e:2b:c7:54:bd:82:a6:f2:29:a3:6d:5c'
+      - run:
+          name: Deploy dist to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist
+
 workflows:
   version: 2
   deploy-workflow: # 部署流程
@@ -41,6 +61,14 @@ workflows:
       - build: # 編譯任務
           requires:
             - test # 測試任務
+          filters:
+            branches:
+              only: master # 適用 master
+
+      - deploy: # 部署
+          requires:
+            - test # 測試任務
+            - build # 編譯任務
           filters:
             branches:
               only: master # 適用 master
