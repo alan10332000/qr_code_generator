@@ -18,7 +18,7 @@ jobs: # 有哪些工作
           name: Lint Code
           command: yarn lint
 
-  generate:
+  build:
     docker:
       - image: circleci/node:latest
     steps:
@@ -27,7 +27,7 @@ jobs: # 有哪些工作
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run: # 編譯靜態檔案
           name: Generate Static File
-          command: yarn generate
+          command: yarn build
       - persist_to_workspace: # 儲存編譯好的檔案
           root: dist
           paths: '*'
@@ -38,7 +38,7 @@ workflows:
     jobs: # 哪些 job 是要執行的
       - test
 
-      - generate: # 編譯任務
+      - build: # 編譯任務
           requires:
             - test # 測試任務
           filters:
