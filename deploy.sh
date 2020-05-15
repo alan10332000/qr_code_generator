@@ -4,7 +4,7 @@
 set -e
 
 # 構建
-npm run build
+yarn build
 
 # cd 到構建輸出的目錄下
 cd dist
