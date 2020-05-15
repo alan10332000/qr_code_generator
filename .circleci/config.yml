@@ -42,7 +42,7 @@ jobs: # 有哪些工作
       - run:
           name: Install and configure dependencies
           command: |
-            npm install -g --silent gh-pages@2.2.0
+            sudo npm install -g --silent gh-pages@2.2.0
             git config user.email $GH_EMAIL
             git config user.name $GH_NAME
       - add_ssh_keys:
