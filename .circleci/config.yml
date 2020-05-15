@@ -40,6 +40,9 @@ jobs: # 有哪些工作
       - attach_workspace: # 回復編譯好的檔案
           at: dist
       - run:
+          name: Custom Domain
+          command: echo 'qr-code.mailvd.com' > CNAME
+      - run:
           name: Install and configure dependencies
           command: |
             sudo npm install -g --silent gh-pages@2.2.0
