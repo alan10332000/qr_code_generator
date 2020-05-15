@@ -50,7 +50,7 @@ jobs: # 有哪些工作
             - 'd4:96:0b:d2:6e:2b:c7:54:bd:82:a6:f2:29:a3:6d:5c'
       - run:
           name: Deploy dist to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist dist
 
 workflows:
   version: 2
